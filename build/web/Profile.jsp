@@ -173,11 +173,12 @@
                             </div>
                         </div>
                         <!-- Error Message -->
-                        <p style="color: red">
+                        <p class="error-message">
                             <c:if test="${requestScope.msg != null}">
                                 ${requestScope.msg}
                             </c:if>
                         </p>
+
                         <p style="color: green">
                             <c:if test="${requestScope.msg2 != null}">
                                 ${requestScope.msg2}
@@ -191,7 +192,7 @@
                 </div>
             </div>
         </c:if>
-        
+
         <script>
             // Toggle the visibility of the birthdate fields
             document.getElementById('edit-birthdate-btn').addEventListener('click', function () {

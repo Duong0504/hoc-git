@@ -161,9 +161,9 @@
                             <!-- Button to toggle edit mode -->
                             <button type="button" id="edit-birthdate-btn">Edit</button>
                         </div>
-                        <script>
+                        <script src="path/to/profileNhanVien.js">
 // Toggle the visibility of the birthdate fields
-                            document.getElementById('edit-birthdate-btn').addEventListener('click', function () {
+                            
                                 var birthdateText = document.getElementById('birthdate-text');
                                 var birthdateEdit = document.getElementById('birthdate-edit');
 
@@ -179,7 +179,7 @@
                                     birthdateText.style.display = 'block';
                                     this.textContent = 'Edit'; // Change button text back to "Edit"
                                 }
-                            });
+                           
                         </script>
 
 

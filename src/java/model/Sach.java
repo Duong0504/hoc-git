@@ -16,126 +16,73 @@ public class Sach {
     private String mota;
     private String tacgia;
     private TheLoai theloai;
-    private String namxb,ngonngu,anhbia,trangthai;
+    private String namxb;
+    private String ngonngu;
+    private String anhbia;
+    private String trangthai;
     private int gia;
     private int soluong;
 
-    public Sach() {
+    // ✅ Private constructor để bắt buộc dùng Builder
+    private Sach(SachBuilder builder) {
+        this.masach = builder.masach;
+        this.nxb = builder.nxb;
+        this.tensach = builder.tensach;
+        this.mota = builder.mota;
+        this.tacgia = builder.tacgia;
+        this.theloai = builder.theloai;
+        this.namxb = builder.namxb;
+        this.ngonngu = builder.ngonngu;
+        this.anhbia = builder.anhbia;
+        this.trangthai = builder.trangthai;
+        this.gia = builder.gia;
+        this.soluong = builder.soluong;
     }
 
-    public Sach(String masach, String nxb, String tensach, String mota, String tacgia, TheLoai theloai, String namxb, String ngonngu, String anhbia, String trangthai, int gia, int soluong) {
-        this.masach = masach;
-        this.nxb = nxb;
-        this.tensach = tensach;
-        this.mota = mota;
-        this.tacgia = tacgia;
-        this.theloai = theloai;
-        this.namxb = namxb;
-        this.ngonngu = ngonngu;
-        this.anhbia = anhbia;
-        this.trangthai = trangthai;
-        this.gia = gia;
-        this.soluong = soluong;
-    }
+    // ✅ Builder Class
+    public static class SachBuilder {
+        private String masach;
+        private String nxb;
+        private String tensach;
+        private String mota;
+        private String tacgia;
+        private TheLoai theloai;
+        private String namxb;
+        private String ngonngu;
+        private String anhbia;
+        private String trangthai;
+        private int gia;
+        private int soluong;
 
-    public String getMasach() {
-        return masach;
-    }
+        public SachBuilder setMasach(String masach) {
+            this.masach = masach;
+            return this;
+        }
 
-    public void setMasach(String masach) {
-        this.masach = masach;
-    }
+        public SachBuilder setNxb(String nxb) {
+            this.nxb = nxb;
+            return this;
+        }
 
-    public String getNxb() {
-        return nxb;
-    }
+        public SachBuilder setTensach(String tensach) {
+            this.tensach = tensach;
+            return this;
+        }
 
-    public void setNxb(String nxb) {
-        this.nxb = nxb;
-    }
+        public SachBuilder setGia(int gia) {
+            this.gia = gia;
+            return this;
+        }
 
-    public String getTensach() {
-        return tensach;
-    }
+        public SachBuilder setSoluong(int soluong) {
+            this.soluong = soluong;
+            return this;
+        }
 
-    public void setTensach(String tensach) {
-        this.tensach = tensach;
-    }
+        // (Có thể thêm các setter khác nếu cần)
 
-    public String getMota() {
-        return mota;
+        public Sach build() {
+            return new Sach(this);
+        }
     }
-
-    public void setMota(String mota) {
-        this.mota = mota;
-    }
-
-    public String getTacgia() {
-        return tacgia;
-    }
-
-    public void setTacgia(String tacgia) {
-        this.tacgia = tacgia;
-    }
-
-    public TheLoai getTheloai() {
-        return theloai;
-    }
-
-    public void setTheloai(TheLoai theloai) {
-        this.theloai = theloai;
-    }
-
-    public String getNamxb() {
-        return namxb;
-    }
-
-    public void setNamxb(String namxb) {
-        this.namxb = namxb;
-    }
-
-    public String getNgonngu() {
-        return ngonngu;
-    }
-
-    public void setNgonngu(String ngonngu) {
-        this.ngonngu = ngonngu;
-    }
-
-    public String getAnhbia() {
-        return anhbia;
-    }
-
-    public void setAnhbia(String anhbia) {
-        this.anhbia = anhbia;
-    }
-
-    public String getTrangthai() {
-        return trangthai;
-    }
-
-    public void setTrangthai(String trangthai) {
-        this.trangthai = trangthai;
-    }
-
-    public int getGia() {
-        return gia;
-    }
-
-    public void setGia(int gia) {
-        this.gia = gia;
-    }
-
-    public int getSoluong() {
-        return soluong;
-    }
-
-    public void setSoluong(int soluong) {
-        this.soluong = soluong;
-    }
-
-    
-    
-    
-    
 }
